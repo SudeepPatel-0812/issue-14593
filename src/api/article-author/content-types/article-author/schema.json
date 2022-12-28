@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_authors",
+  "info": {
+    "singularName": "article-author",
+    "pluralName": "article-authors",
+    "displayName": "Article Authors",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "article_authors"
+    },
+    "site_id": {
+      "type": "string"
+    }
+  }
+}
